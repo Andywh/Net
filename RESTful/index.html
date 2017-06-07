@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+	<title></title>
+	<style type="text/css">
+		#title{
+			font-weight: bold;
+		}
+/*		body {
+			color: white;
+			background-color: black;
+		}*/
+		span.red {
+			color:red;
+			font-size: 60px;
+			font-style: italic;
+		}
+		#header {
+			background-color: black;
+			color: white;
+			text-align: center;
+			padding: 5px;
+		}
+		#nav {
+			line-height: 30px;
+			background-color: #eeeeee;
+			height: 300px;
+			width: 150px;
+			float: left;
+			padding: 5px;
+		}
+		#section {
+			width: 350px;
+			float:left;
+			padding: 10px;
+		}
+		#footbar {
+			background-color: black;
+			color: white;
+			clear: both;
+			text-align: center;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+<div id="header">
+<ul id="title">
+	<h1> <span class="red"> RESTful</span>    Web Service <h1>
+</ul>
+</div>
+
+<div id= "nav">
+
+<a href="#" id = "get">
+	简介<br>
+</a>
+
+<a href="#" id = "post">
+	测试<br>
+</a>
+
+</div>
+
+<div id="section">
+<h2>测试</h2>
+<ul>
+	GET<br>	
+<!-- <a  id="intro"> -->
+<li>
+<a href="/todos">
+	http://116.62.60.145:9001/todos/
+</a>
+</li>
+<li>
+<a href="/todos/{todoId}">
+	http://116.62.60.145:9001/todos/{todoId}
+
+</a>
+</li>
+
+<!-- </a> -->
+
+<!-- <form action="/" method="post">
+		请输入长网址:</br>
+        <input type="text" name="longurl">
+        <input type="submit" value="生成短地址"></br>
+		新网址:</br>
+        http://116.62.60.145/<output type="text" name="shorturl">
+</form> -->
+
+<br>
+	POST<br>		
+<a  id="intro">
+<li>
+	<form action="/todos" method="POST">
+		<input type="number" name="id">(id)</br>
+		<input type="text" name="name">(name)</br>
+		<input type="submit" name="post"></br>
+	</form>
+</li>
+
+</a>	
+</ul>
+
+
+</div>
+
+<div id="footbar">
+Copyright by SongLiang
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	alert(11);
+$("#get").click(function(){
+		alert(2);
+		$("#intro").text("Hellow");
+		 //$(this).hide();
+	});
+});
+</script>
+
+</body>
+</html>
